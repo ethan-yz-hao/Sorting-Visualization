@@ -1,4 +1,4 @@
-const n = 10;
+const n = 20;
 const array = [];
 
 let audioCtx = null;
