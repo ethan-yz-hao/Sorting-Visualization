@@ -16,3 +16,8 @@ body{
     background-color: black;
     margin: 1px;
 }
+
+#slider {
+    margin:0;
+    text-align:center;
+}

@@ -1,15 +1,25 @@
-const n = 20;
-const array = [];
+let n = 20;
+let array = [];
 
 let audioCtx = null;
 let isRun = false;
+let slider = document.getElementById("slider");
+const dispArrSize = document.getElementById("dispArrSize");
+const container = document.getElementById("container");
 
 init();
+dispArrSize.innerHTML = "Array size: " + n;
+slider.addEventListener("change", function () {
+    n = slider.value;
+    dispArrSize.innerHTML = "Array size: " + n;
+    init();
+})
 
 function init() {
-    if(isRun){
-        isRun=false;
+    if (isRun) {
+        isRun = false;
     }
+    array = [];
     for (let i = 0; i < n; i++) {
         array[i] = Math.random();
     }
@@ -19,8 +29,8 @@ function init() {
 function play() {
     const copy = [...array];
     const moves = bubbleSort(copy);
-    if(!isRun){// if not currently running
-        isRun=true;
+    if (!isRun) {// if not currently running
+        isRun = true;
         animate(moves);
     }
 }
@@ -28,10 +38,10 @@ function play() {
 function animate(moves) {
     if (moves.length === 0) {
         showBars();
-        isRun=false;
+        isRun = false;
         return;
     }
-    if (!isRun){
+    if (!isRun) {
         return;
     }
     const move = moves.shift();

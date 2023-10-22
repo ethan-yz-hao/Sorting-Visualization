@@ -6,16 +6,21 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Sorting Visualizer</h1>
-    <div id="container"></div>
+<h1>Sorting Visualizer</h1>
 
-    <hr>
+<input type='range' min='0' max='100' value='0' id='slider'></input>
+<div id="dispArrSize"></div>
+<div id='dispDiv' style='margin-top:2em;'></div>
 
-    <div>
-        <button onclick="init()">Init</button>
-        <button onclick="play()">Play</button>
-    </div>
+<div id="container"></div>
 
-    <script src="script.js"></script>
+<hr>
+
+<div>
+    <button onclick="init()">Init</button>
+    <button onclick="play()">Play</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
